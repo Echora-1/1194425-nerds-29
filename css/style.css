@@ -1,0 +1,256 @@
+/* Variables */
+
+:root {
+	--basic-black: #000000;
+	--basic-extra-dark: #283136;
+	--basic-neutral: #eeeeee;
+	--basic-red: #fb565a;
+	--basic-extra-red: #e74246;
+	--basic-dark-red: #d7373b;
+	--basic-green: #00ca74;
+	--basic-extra-green: #00bc6c;
+	--basic-dark-green: #00aa62;
+	--basic-yellow: #efc849;
+	--basic-extra-yellow: #eab534;
+	--basic-dark-yellow: #e5a722;
+	--basic-gray: #666666;
+	--basic-extra-gray: #444444;
+	--basic-white: #ffffff;
+	--gray-gradient: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+	--red-gradient: background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+	--dark-red-gradient: background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+}
+
+/* Global */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Main */
+
+.page-body {
+	min-width: 1158px;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--basic-extra-dark);
+	font-weight: normal;
+	font-style: normal;
+	background-color: var(--basic-white);
+}
+
+.button {
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-white);
+	background: var(--basic-red);
+	border-radius: 3px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.button:hover {
+	background: var(--basic-extra-red);
+}
+
+.button:focus {
+	background: var(--basic-dark-red);
+}
+/* Main navigation */
+
+.main-navigation {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 30px;
+	color: var(--basic-black);
+	background-color: var(--basic-neutral);
+	text-transform: uppercase;
+}
+
+.site-navigation,
+.user-navigation {
+	list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+	color: var(--basic-black);
+	text-decoration: none;
+}
+
+.site-navigation a:hover,
+.user-navigation a:hover {
+	color: var(--basic-red);
+}
+
+.site-navigation a:focus,
+.user-navigation a:focus {
+	mix-blend-mode: normal;
+	opacity: 0.3;
+}
+
+/* Slider */
+
+.slider {
+	background-color: var(--basic-neutral);
+}
+.slider-list {
+	list-style: none;
+}
+
+.slider-title {
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+	color: var(--basic-black);
+}
+
+/* Services */
+
+.services h3 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.services-list {
+	list-style: none;
+}
+
+.app {
+	background: var(--basic-green);
+}
+
+.app:hover {
+	background: var(--basic-extra-green);
+}
+
+.app:focus {
+	background: var(--basic-dark-green);
+}
+
+.presentation {
+	background: var(--basic-yellow);
+}
+
+.presentation:hover {
+	background: var(--basic-extra-yellow);
+}
+
+.presentation:focus {
+	background: var(--basic-dark-yellow);
+}
+
+/* About */
+
+.about-title {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 45px;
+	color: var(--basic-black);
+}
+
+.about-list-title {
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.advantage-title {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.about-list {
+	list-style: none;
+}
+
+.advantage-th {
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 64px;
+	color: var(--basic-black);
+}
+
+.advantage-th sup {
+	font-size: 26px;
+	line-height: 40px;
+	color: var(--basic-black);
+}
+
+.advantage-td {
+	line-height: 18px;
+}
+
+/* Producer */
+
+.producer-list {
+	list-style: none;
+}
+
+.producer-item a:hover {
+	opacity: 1;
+}
+
+.producer-item a:focus {
+	opacity: 0.1;
+}
+
+/* Contacts */
+
+.footer-contacts {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-gray);
+}
+
+.contacts-title {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.contacts-phone {
+	text-decoration: none;
+	color: var(--basic-gray);
+}
+
+/* Social */
+
+.footer-social {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--basic-extra-gray);
+}
+
+.footer-social-title {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 36px;
+	color: var(--basic-black);
+}
+
+.social-list {
+	list-style: none;
+}
+
+.social-button:focus {
+	opacity: 0.3;
+}
