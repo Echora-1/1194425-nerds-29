@@ -4,103 +4,112 @@
 <head>
     <meta charset="utf-8">
     <title>Магазин Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="index.html">
+<body class="page-body">
+    <header class="main-hader">
+        <nav class="main-navigation">
+            <a class="main-header-logo" href="index.html">
                 <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Перейти на главную страницу дизайн-студии «Нёрдс»">
             </a>
-            <ul>
+            <ul class="site-navigation">
                 <li><a href="">Студия</a></li>
                 <li><a href="">Клиенты</a></li>
-                <li><a>Магазин</a></li>
+                <li>Магазин</li>
                 <li><a href="">Контакты</a></li>
             </ul>
             <img src="https://via.placeholder.com/15x15" width="15" height="15" alt="">
-            <ul>
-                <li><a href="">Корзина</a></li>
+            <ul class="user-navigation">
+                <li><a class="basket-link" href="">Корзина</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Магазин готовых шаблонов</h1>
+    <main class="container">
+        <h1 class="catalog-title">Магазин готовых шаблонов</h1>
 
-        <section>
+        <section class="filters">
             <h2>Фильтер шаблонов</h2>
         </section>
 
-        <section>
+        <section class="catalog">
             <h2>Список шаблонов</h2>
-            <ul>
-                <li><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «SEDONA»">
-                    <a href="">SEDONA</a>
+            <ul class="catalog-list">
+                <li class="catalog-item">
+                    <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «SEDONA»">
+                    <a href="" class="catalog-item-title">SEDONA</a>
                     <p>Информационный сайт для туристов</p>
-                    <a href="">9 900 ₽</a>
+                    <a href="" class="button price">9 900 ₽</a>
                 </li>
-                <li><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «PINK»">
-                    <a href="">PINK APP</a>
+                <li class="catalog-item">
+                    <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «PINK»">
+                    <a href="" class="catalog-item-title">PINK APP</a>
                     <p>Продуктовый лендинг приложения для iOS и Android</p>
-                    <a href="">9 900 ₽</a>
+                    <a href="" class="button price">9 900 ₽</a>
                 </li>
-                <li><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «BORODINSKI»">
-                    <a href="">BARBERSHOP</a>
+                <li class="catalog-item">
+                    <img src="https://via.placeholder.com/358x578 " width="358" height="578" alt="Шаблон сайта «BORODINSKI»">
+                    <a href="" class="catalog-item-title">BARBERSHOP</a>
                     <p>Сайт салона красоты.Для мужчин, да.</p>
-                    <a href="">9 900 ₽</a>
+                    <a href="" class="button price">9 900 ₽</a>
                 </li>
-                <li><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «MISHKA»">
-                    <a href="">MISHKA</a>
+                <li class="catalog-item">
+                    <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «MISHKA»">
+                    <a href="" class="catalog-item-title">MISHKA</a>
                     <p>Интернет-магазин вязаных игрушек</p>
-                    <a href="">9 900 ₽</a>
+                    <a href="" class="button price">9 900 ₽</a>
                 </li>
-                <li><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «A+»">
-                    <a href="">A PLUS</a>
+                <li class="catalog-item">
+                    <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «A+»">
+                    <a href="" class="catalog-item-title">A PLUS</a>
                     <p>Лендинг курсов повышения квалификации</p>
-                    <a href="">9 900 ₽</a>
+                    <a href="" class="button price">9 900 ₽</a>
                 </li>
-                <li><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «КВАСТ»">
-                    <a href="">КВАСТ</a>
+                <li class="catalog-item">
+                    <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Шаблон сайта «КВАСТ»">
+                    <a href="" class="catalog-item-title">КВАСТ</a>
                     <p>Промо-сайт производителя крафтового кваса</p>
-                    <a href="">9 900 ₽</a>
+                    <a href="" class="button price">9 900 ₽</a>
                 </li>
             </ul>
-            <ul>
-                <li>1</li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">Следующая</a></li>
+            <ul class="pagination-list">
+                <li class="pagination-item pagination-item-curren">1</li>
+                <li class="pagination-item"><a href="" class="pagination-batton">2</a></li>
+                <li class="pagination-item"><a href="" class="pagination-batton">3</a></li>
+                <li class="pagination-item"><a href="" class="pagination-batton next">Следующая</a></li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <section>
+    <footer class="page-footer main-footer">
+        <section class="footer-contacts">
             <h2>Как нас найти</h2>
-            <img src="https://via.placeholder.com/1440x416" width="1440" height="416" alt="Карта">
-            <p>NЁRDS DESIGN STUDIO</p>
+            <img src="https://via.placeholder.com/1440x416 " width="1440" height="416" alt="Карта">
+            <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
             <p>
                 191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8тел. <br><br>
-                <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+                <a href="tel:+78122757575" class="contacts-phone">+7 (812) 275-75-75</a>
             </p>
-            <a href="">НАПИШИТЕ НАМ</a>
+            <a href="" class="button">НАПИШИТЕ НАМ</a>
         </section>
 
-        <section>
+        <section class="footer-social">
             <h2>Социальные сети</h2>
-            <ul>
+            <ul class="social-list">
                 <li>
-                    <a href=""><img src="https://via.placeholder.com/26x15" width="26" height="15" alt="Вконтакте"></a>
+                    <a href="" class="social-button "><img src="https://via.placeholder.com/26x15" width="26" height="15" alt="Вконтакте"></a>
                 </li>
                 <li>
-                    <a href=""><img src="https://via.placeholder.com/12x22" width="12" height="22" alt="Фейсбук"></a>
+                    <a href="" class="social-button "><img src="https://via.placeholder.com/12x22" width="12" height="22" alt="Фейсбук"></a>
                 </li>
                 <li>
-                    <a href=""><img src="https://via.placeholder.com/21x21" width="21" height="21" alt="Инстаграм"></a>
+                    <a href="" class="social-button "><img src="https://via.placeholder.com/21x21" width="21" height="21" alt="Инстаграм"></a>
                 </li>
             </ul>
-            <p>Давайте дружить, это выгодно!</p>
+            <p class="footer-social-title">Давайте дружить, это выгодно!</p>
             <p>Скидка 10% для друзей из социальных сетей.</p>
         </section>
     </footer>

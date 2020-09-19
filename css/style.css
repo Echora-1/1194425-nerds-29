@@ -2,6 +2,7 @@
 
 :root {
     --basic-black: #000000;
+    --basic-black-active: rgba(0, 0, 0, 0.3);
     --basic-extra-dark: #283136;
     --basic-neutral: #eeeeee;
     --basic-red: #fb565a;
@@ -14,12 +15,15 @@
     --basic-extra-yellow: #eab534;
     --basic-dark-yellow: #e5a722;
     --basic-gray: #666666;
+    --basic-gray-curren: #dbdbdb;
     --basic-extra-gray: #444444;
+    --basic-gray-hover: #dfdfdf;
+    --basic-gray-active: #d5d5d5;
     --basic-white: #ffffff;
     --basic-white-active: rgba(255, 255, 255, 0.3);
-    --gray-gradient: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
-    --red-gradient: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
-    --dark-red-gradient: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+    --gray-gradient: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
+    --red-gradient: linear-gradient(0deg, #e74246, #e74246), #ffffff;
+    --dark-red-gradient: linear-gradient(0deg, #d7373b, #d7373b), #ffffff;
 }
 
 
@@ -278,4 +282,83 @@ img {
 
 .social-button img:active {
     opacity: 0.3;
+}
+
+
+/* Catalog */
+
+.catalog-title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: var(--basic-black);
+}
+
+.catalog {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--basic-gray);
+}
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-decoration: none;
+}
+
+.catalog-item-title:hover {
+    color: var(--basic-red);
+}
+
+.catalog-item-title:active {
+    color: var(--basic-black-active);
+}
+
+.price:active {
+    color: var(--basic-white);
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-black);
+}
+
+.pagination-item-curren {
+    background: var(--basic-white);
+    border: 3px solid var(--basic-gray-curren);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.pagination-batton {
+    background: var(--basic-neutral);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+.pagination-batton:hover {
+    background: var(--basic-gray-hover);
+}
+
+.pagination-batton:active {
+    background: var(--basic-gray-active);
+    color: var(--basic-black-active);
+}
+
+.next {
+    text-transform: uppercase;
 }
