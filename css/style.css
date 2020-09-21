@@ -216,11 +216,15 @@ img {
     list-style: none;
 }
 
-.producer-item a:hover {
+.producer-item {
+    opacity: 0.2;
+}
+
+.producer-item:hover {
     opacity: 1;
 }
 
-.producer-item a:active {
+.producer-item:active {
     opacity: 0.1;
 }
 
