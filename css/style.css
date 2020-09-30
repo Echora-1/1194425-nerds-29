@@ -377,6 +377,10 @@ img {
 
 /* Footer */
 
+.page-footer {
+    grid-row: 3/4;
+}
+
 .footer-container {
     width: 1160px;
     margin: 0 auto;
