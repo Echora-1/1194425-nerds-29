@@ -159,7 +159,6 @@ img {
 .main-container {
     width: 1160px;
     margin: 0 auto;
-    padding-top: 80px;
 }
 
 
@@ -212,6 +211,7 @@ img {
 /* Services */
 
 .services {
+    padding-top: 80px;
     padding-bottom: 80px;
 }
 
@@ -365,6 +365,10 @@ img {
 
 /* Producer */
 
+.producer {
+    padding-bottom: 20px;
+}
+
 .producer-list {
     margin: 0px;
     padding: 0px;
@@ -398,7 +402,7 @@ img {
 .footer-container {
     width: 1160px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 68px;
     display: grid;
     grid-template-rows: auto auto;
@@ -506,47 +510,50 @@ img {
 }
 
 
-/* Filter */
-
-.filters {
-    margin-top: 108px;
-    grid-column: 1/2;
-}
-
-
 /* Catalog */
 
 .page-catalog {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    align-content: start;
+    padding-top: 55px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .catalog-title {
-    padding: 0px;
     margin: 0px;
-    margin-top: 41px;
+    padding-top: 72px;
+    padding-bottom: 108px;
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
     color: rgb(var(--basic-black));
-    grid-column: 1/-1;
+    background-color: var(--basic-neutral);
     text-align: center;
 }
 
 .catalog {
-    margin-top: 108px;
+    padding-left: 140px;
     font-size: 16px;
     line-height: 18px;
     text-align: center;
     color: var(--basic-gray);
-    grid-column: 2/3;
 }
 
 .catalog-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog-item {
+    width: 360px;
+    margin-right: 40px;
+    padding-bottom: 30px;
+}
+
+.catalog-item:nth-child(2n) {
+    margin-right: 0;
 }
 
 .catalog-item-title {
@@ -571,14 +578,21 @@ img {
 }
 
 
+/* Filter */
+
+.filters {
+    min-width: 260px;
+}
+
+
 /* Pagination */
 
 .pagination-list {
     list-style: none;
     margin: 0;
-    margin-top: 54px;
     padding: 0;
-    grid-column: 2/3;
+    padding-top: 24px;
+    display: flex;
 }
 
 .pagination-item {
@@ -586,6 +600,11 @@ img {
     font-size: 16px;
     line-height: 18px;
     color: rgb(var(--basic-black));
+    margin-right: 11px;
+}
+
+.pagination-item:last-child {
+    margin-right: 0px;
 }
 
 .pagination-item-current {
