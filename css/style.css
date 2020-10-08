@@ -265,9 +265,10 @@ img {
     width: 18px;
     height: 18px;
     background-color: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid rgb(var(--basic-white));
     border-radius: 50%;
     cursor: pointer;
+    outline: none;
 }
 
 .slider-controls .current {
@@ -565,6 +566,62 @@ img {
 .footer-contacts .button {
     padding: 17px 44px 15px 44px;
     display: block;
+}
+
+
+/* Popup */
+
+.poppup {
+    width: 590px;
+    margin: 0 auto;
+}
+
+.popup-title {
+    padding: 63px 90px 37px 100px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    color: rgb(var(--basic-black));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-title p:first-child {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.popup-title button {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+.close {}
+
+.close img {
+    opacity: 0.3;
+}
+
+.close img:hover {
+    opacity: 1;
+}
+
+.close img:active {
+    opacity: 0.1;
+}
+
+.contact-form {
+    padding: 0px 99px 84px 100px;
+}
+
+.contact-form .button {
+    padding: 17px 83px 15px 83px;
+    outline: none;
+    border: none;
 }
 
 
