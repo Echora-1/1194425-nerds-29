@@ -19,7 +19,7 @@
                 <ul class="site-navigation">
                     <li><a href="">Студия</a></li>
                     <li><a href="">Клиенты</a></li>
-                    <li>Магазин</li>
+                    <li class="navigation-current">Магазин</li>
                     <li><a href="">Контакты</a></li>
                 </ul>
                 <ul class="user-navigation">
@@ -35,50 +35,126 @@
         <div class="main-container page-catalog">
             <section class="filters">
                 <h2 class="visually-hidden">Фильтер шаблонов</h2>
+                <form method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter-item">
+                        <legend>Стоимость:</legend>
+                        <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min" tabindex="0"></div>
+                                <div class="toggle toggle-max" tabindex="0"></div>
+                            </div>
+                            <div class="price-controls">
+                                <label class="min-price">
+									от <input type="number" name="min-price" value="0">
+								</label>
+                                <label class="max-price">
+									до <input type="number" name="max-price" value="15000">
+								</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </section>
 
             <section class="catalog">
                 <h2 class="visually-hidden">Список шаблонов</h2>
                 <ul class=" catalog-list ">
                     <li class="catalog-item ">
-                        <img src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон сайта «SEDONA»">
-                        <a href=" " class="catalog-item-title">sedona</a>
-                        <p>Информационный сайт для туристов</p>
-                        <a href=" " class="button price">9 900 ₽</a>
+                        <div class="product-border">
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                        </div>
+                        <div class="product">
+                            <img class="product-image" src="img/img-sedona.jpg" width="357" height="578" alt="Шаблон сайта «SEDONA»">
+                            <div class="product-description">
+                                <a href=" " class="catalog-item-title">sedona</a>
+                                <p class="product-content">Информационный сайт<br> для туристов</p>
+                                <a href=" " class="button price">9 900 ₽</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="catalog-item ">
-                        <img src="img/img-pink.jpg" width="358" height="578" alt="Шаблон сайта «PINK»">
-                        <a href=" " class="catalog-item-title">pink app</a>
-                        <p>Продуктовый лендинг приложения для iOS и Android</p>
-                        <a href=" " class="button price">9 900 ₽</a>
+                        <div class="product-border">
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                        </div>
+                        <div class="product">
+                            <img class="product-image" src="img/img-pink.jpg" width="357" height="578" alt="Шаблон сайта «PINK»">
+                            <div class="product-description">
+                                <a href=" " class="catalog-item-title">pink app</a>
+                                <p class="product-content">Продуктовый лендинг приложения для iOS и Android</p>
+                                <a href=" " class="button price">9 900 ₽</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="catalog-item ">
-                        <img src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон сайта «BORODINSKI»">
-                        <a href=" " class="catalog-item-title">barbershop</a>
-                        <p>Сайт салона красоты.Для мужчин, да.</p>
-                        <a href=" " class="button price">9 900 ₽</a>
+                        <div class="product-border">
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                        </div>
+                        <div class="product">
+                            <img class="product-image" src="img/img-barbershop.jpg" width="357" height="578" alt="Шаблон сайта «BORODINSKI»">
+                            <div class="product-description">
+                                <a href=" " class="catalog-item-title">barbershop</a>
+                                <p class="product-content">Сайт салона красоты.<br> Для мужчин, да.</p>
+                                <a href=" " class="button price">9 900 ₽</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="catalog-item ">
-                        <img src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон сайта «MISHKA»">
-                        <a href=" " class="catalog-item-title">mishka</a>
-                        <p>Интернет-магазин вязаных игрушек</p>
-                        <a href=" " class="button price">9 900 ₽</a>
+                        <div class="product-border">
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                        </div>
+                        <div class="product">
+                            <img class="product-image" src="img/img-mishka.jpg" width="357" height="578" alt="Шаблон сайта «MISHKA»">
+                            <div class="product-description">
+                                <a href=" " class="catalog-item-title">mishka</a>
+                                <p class="product-content">Интернет-магазин<br> вязаных игрушек</p>
+                                <a href=" " class="button price">9 900 ₽</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="catalog-item ">
-                        <img src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон сайта «A+»">
-                        <a href=" " class="catalog-item-title">a plus</a>
-                        <p>Лендинг курсов повышения квалификации</p>
-                        <a href=" " class="button price">9 900 ₽</a>
+                        <div class="product-border">
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                        </div>
+                        <div class="product">
+                            <img class="product-image" src="img/img-aplus.jpg" width="357" height="578" alt="Шаблон сайта «A+»">
+                            <div class="product-description">
+                                <a href=" " class="catalog-item-title">a plus</a>
+                                <p class="product-content">Лендинг курсов повышения квалификации</p>
+                                <a href=" " class="button price">9 900 ₽</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="catalog-item ">
-                        <img src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон сайта «КВАСТ»">
-                        <a href=" " class="catalog-item-title">кваст</a>
-                        <p>Промо-сайт производителя крафтового кваса</p>
-                        <a href=" " class="button price">9 900 ₽</a>
+                        <div class="product-border">
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                            <div class="border-circle"></div>
+                        </div>
+                        <div class="product">
+                            <img class="product-image" src="img/img-kvast.jpg" width="357" height="578" alt="Шаблон сайта «КВАСТ»">
+                            <div class="product-description">
+                                <a href=" " class="catalog-item-title">кваст</a>
+                                <p class="product-content">Промо-сайт производителя крафтового кваса</p>
+                                <a href=" " class="button price">9 900 ₽</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <ul class="pagination-list">
-                    <li class="pagination-item pagination-item-current">1</li>
+                    <li class="pagination-item"><a class="pagination-button-current">1</a></li>
                     <li class="pagination-item"><a href=" " class="pagination-button">2</a></li>
                     <li class="pagination-item"><a href=" " class="pagination-button">3</a></li>
                     <li class="pagination-item"><a href=" " class="pagination-button next">Следующая</a></li>
@@ -94,12 +170,21 @@
                 <section class="footer-contacts">
                     <h2 class="visually-hidden">Как нас найти</h2>
                     <p class="contacts-title">nёrds design studio</p>
-                    <p>
-                        191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8тел. <br><br>
+                    <p class="contacts-paragraph">
+                        191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8 <br><br> тел.
                         <a href="tel:+78122757575" class="contacts-phone">+7 (812) 275-75-75</a>
                     </p>
-                    <a href=" " class="button">напишите нам</a>
+                    <a href=" " class="contacts-button button">напишите нам</a>
                 </section>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <p class="popup-title">Напишите нам</p>
+                    <button class="close" type="button"><img class="close-image" src="img/close-cross.svg" width="21" height="21" alt="Закрыть"></button>
+                </div>
+                <form class="contact-form" action="https://echo.htmlacademy.ru ">
+                    <button class="send-button button " type="submit">Отправить</button>
+                </form>
             </div>
             <section class="footer-social">
                 <h2 class="visually-hidden">Социальные сети</h2>
