@@ -187,7 +187,19 @@
             <p class="popup-title">Напишите нам</p>
             <button class="close" type="button"><img class="close-image" src="img/close-cross.svg" width="21" height="21" alt="Закрыть"></button>
         </div>
-        <form class="contact-form" action="https://echo.htmlacademy.ru ">
+        <form class="contact-form" action="https://echo.htmlacademy.ru">
+            <p>
+                <label class="name-title" for="name-field">Ваше имя:</label><br>
+                <input class="name-user contact-form-input " id="name-field" type="text" name="name" placeholder="Имя Фамилия ">
+            </p>
+            <p>
+                <label class="email-title" for="email-field">Ваш email:</label><br>
+                <input class="email-user  contact-form-input" id="email-field" type="email" name="email" placeholder="email@example.com ">
+            </p>
+            <p>
+                <label class="message-title" for="message">Текст письма:</label>
+                <textarea class="message-textarea contact-form-input" id="message" name="message" rows="5" placeholder="В свободной форме "></textarea>
+            </p>
             <button class="send-button button " type="submit">Отправить</button>
         </form>
     </div>

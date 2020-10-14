@@ -15,7 +15,7 @@
     --basic-dark-yellow: #e5a722;
     --basic-gray: #666666;
     --basic-gray-current: #dbdbdb;
-    --basic-extra-gray: #444444;
+    --basic-extra-gray: 68, 68, 68;
     --basic-gray-hover: #dfdfdf;
     --basic-gray-active: #d5d5d5;
     --basic-gray-slider: #C1C1C1;
@@ -25,6 +25,7 @@
     --toggle-shadow: #cfcfcf;
     --product-gray: 77, 77, 77;
     --product-background: #F2F2F2;
+    --input-hover-gray: #B4B9BB;
     --basic-white: 255, 255, 255;
     --gray-gradient: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
     --red-gradient: linear-gradient(0deg, #e74246, #e74246), #ffffff;
@@ -47,13 +48,14 @@ img {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
     color: var(--basic-extra-dark);
     background-color: rgb(var(--basic-white));
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
 }
@@ -321,6 +323,7 @@ img {
     list-style: none;
     display: grid;
     grid-template-columns: 300px 300px 300px;
+    -moz-column-gap: 100px;
     column-gap: 100px;
 }
 
@@ -380,6 +383,7 @@ img {
 .about {
     display: grid;
     grid-template-columns: 1fr 360px;
+    -moz-column-gap: 135px;
     column-gap: 135px;
     padding-top: 39px;
     padding-bottom: 72px;
@@ -639,15 +643,16 @@ img {
 .popup {
     position: fixed;
     z-index: 3;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 761px;
-    min-height: 443px;
-    padding: 63px 99px 84px 100px;
-    display: none;
+    bottom: 50%;
+    transform: translate(-50%, 52%);
+    width: 960px;
+    height: 590px;
+    padding: 65px 99px 84px 100px;
+    display: block;
     box-shadow: 0px 20px 40px rgba(var(--basic-black), 0.4);
     background-color: rgb(var(--basic-white));
+    box-sizing: border-box;
 }
 
 .popup-content {
@@ -658,14 +663,18 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .popup-title {
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 1px;
 }
 
 .close {
+    position: absolute;
+    top: -10%;
+    right: -1.5%;
     padding: 0;
     border: none;
     outline: none;
@@ -684,10 +693,74 @@ img {
     opacity: 0.1;
 }
 
+.contact-form {
+    line-height: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form:last-child {
+    margin-top: 18px;
+}
+
+.name-title,
+.email-title,
+.message-title {
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.name-user,
+.email-user {
+    margin-top: 5px;
+    box-sizing: border-box;
+    width: 360px;
+    padding: 15px 14px 14px 16px;
+}
+
+.contact-form-input {
+    border: 2px solid var(--filter-gray);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.message-textarea {
+    margin-top: 4px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    width: 760px;
+    padding: 16px 16px 10px 15px;
+    resize: none;
+}
+
 .send-button {
-    padding: 17px 83px 15px 83px;
+    margin-left: 1px;
+    padding: 17px 85px 15px 82px;
     outline: none;
     border: none;
+}
+
+.contact-form-input::-webkit-input-placeholder {
+    color: rgba(var(--basic-extra-gray), 0.5);
+}
+
+.contact-form-input:focus::-webkit-input-placeholder {
+    color: rgb(var(--basic-extra-gray));
+}
+
+.contact-form-input:hover {
+    border: 2px solid var(--input-hover-gray);
+}
+
+.contact-form-input:focus {
+    color: rgb(var(--basic-extra-gray));
+}
+
+.contact-form-input:invalid {
+    border: 2px solid var(--basic-extra-red);
+    color: var(--basic-extra-red);
 }
 
 
@@ -698,7 +771,7 @@ img {
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    color: var(--basic-extra-gray);
+    color: rgb(var(--basic-extra-gray));
     display: grid;
     grid-template-columns: auto 1fr;
 }
@@ -834,7 +907,9 @@ img {
 .product-image {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center;
     object-position: center;
 }
 
