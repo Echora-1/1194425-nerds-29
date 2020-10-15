@@ -96,6 +96,7 @@ img {
 .container-header {
     width: 1160px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .main-header {
@@ -196,6 +197,7 @@ img {
 .main-container {
     width: 1160px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 
@@ -206,8 +208,9 @@ img {
 }
 
 .slider-container {
-    width: 1160px;
+    width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -227,7 +230,7 @@ img {
     padding-bottom: 80px;
     z-index: 1;
     position: absolute;
-    left: 0;
+    left: 40px;
 }
 
 .slider-title {
@@ -255,12 +258,13 @@ img {
 .slider-button {
     padding: 17px 56px 15px 53px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .slider-image {
     max-height: 429px;
-    margin-top: -3px;
-    margin-right: 3px;
+    margin-top: -4px;
+    margin-right: 23px;
 }
 
 .slide {
@@ -273,8 +277,8 @@ img {
 
 .slider-controls {
     position: absolute;
-    bottom: 96px;
-    left: 536px;
+    bottom: 95px;
+    left: 576px;
     z-index: 2;
     display: flex;
     width: 88px;
@@ -351,6 +355,7 @@ img {
     margin-top: 0px;
     padding: 17px 40px 15px 38px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .app {
@@ -582,7 +587,9 @@ img {
     width: 1160px;
     margin: 0 auto;
     padding-top: 60px;
+    padding-right: 20px;
     padding-bottom: 68px;
+    padding-left: 20px;
     display: grid;
     grid-template-rows: auto auto;
     position: relative;
@@ -649,7 +656,7 @@ img {
     width: 960px;
     height: 590px;
     padding: 65px 99px 84px 100px;
-    display: block;
+    display: none;
     box-shadow: 0px 20px 40px rgba(var(--basic-black), 0.4);
     background-color: rgb(var(--basic-white));
     box-sizing: border-box;
@@ -660,9 +667,6 @@ img {
     font-size: 45px;
     line-height: 53px;
     color: rgb(var(--basic-black));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
 }
 
@@ -694,22 +698,19 @@ img {
 }
 
 .contact-form {
+    margin-top: 18px;
     line-height: 18px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.contact-form:last-child {
-    margin-top: 18px;
-}
-
-.name-title,
-.email-title,
-.message-title {
+.contact-form--title {
     font-weight: bold;
     padding-bottom: 5px;
     display: inline-block;
+    vertical-align: top;
+    color: rgb(var(--basic-black));
 }
 
 .name-user,
@@ -724,6 +725,10 @@ img {
     border: 2px solid var(--filter-gray);
     box-sizing: border-box;
     border-radius: 3px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .message-textarea {
@@ -744,6 +749,10 @@ img {
 
 .contact-form-input::-webkit-input-placeholder {
     color: rgba(var(--basic-extra-gray), 0.5);
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .contact-form-input:focus::-webkit-input-placeholder {
@@ -756,6 +765,7 @@ img {
 
 .contact-form-input:focus {
     color: rgb(var(--basic-extra-gray));
+    border: 2px solid rgb(var(--basic-black));
 }
 
 .contact-form-input:invalid {
@@ -939,6 +949,7 @@ img {
     color: rgb(var(--basic-black));
     text-decoration: none;
     display: inline-block;
+    vertical-align: top;
 }
 
 .product-content {
@@ -950,6 +961,7 @@ img {
 .price {
     padding: 16px 72px 17px 72px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .catalog-item-title:hover {
