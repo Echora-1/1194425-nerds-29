@@ -293,7 +293,6 @@ img {
     border: 2px solid rgb(var(--basic-white));
     border-radius: 50%;
     cursor: pointer;
-    outline: none;
 }
 
 .slider-controls .current {
@@ -681,8 +680,11 @@ img {
     right: -1.5%;
     padding: 0;
     border: none;
-    outline: none;
     background-color: inherit;
+}
+
+.close:active {
+    outline: none;
 }
 
 .close-image {
@@ -743,8 +745,11 @@ img {
 .send-button {
     margin-left: 1px;
     padding: 17px 85px 15px 82px;
-    outline: none;
     border: none;
+}
+
+.send-button:active {
+    outline: none;
 }
 
 .contact-form-input::-webkit-input-placeholder {
