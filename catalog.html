@@ -37,7 +37,7 @@
                 <h2 class="visually-hidden">Фильтер шаблонов</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
                     <fieldset class="filter-item">
-                        <legend>Стоимость:</legend>
+                        <legend class="filter-legend">Стоимость:</legend>
                         <div class="range-filter">
                             <div class="range-controls">
                                 <div class="scale">
@@ -56,99 +56,161 @@
                             </div>
                         </div>
                     </fieldset>
+                    <fieldset class="fieldset fieldset-grid">
+                        <legend class="filter-legend">Сетка:</legend>
+                        <ul class="filter-grid">
+                            <li class="filter-radio">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="product-grid" value="adaptive" id="grid-adaptive" checked>
+                                <label for="grid-adaptive">Адаптивная</label>
+                            </li>
+                            <li class="filter-radio">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="product-grid" value="fixed" id="grid-fixed">
+                                <label for="grid-fixed">Фиксированная</label>
+                            </li>
+                            <li class="filter-radio">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="product-grid" value="rubber" id="grid-rubber">
+                                <label for="grid-rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="fieldset fieldset-features">
+                        <legend class="filter-legend">Особенности:</legend>
+                        <ul class="filter-features">
+                            <li class="filter-checkbox">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+                                <label for="filter-slider">Слайдер</label>
+                            </li>
+                            <li class="filter-checkbox">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantages-block" id="filter-advantages-block">
+                                <label for="filter-advantages-block">Блок преимуществ</label>
+                            </li>
+                            <li class="filter-checkbox">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+                                <label for="filter-news">Новости</label>
+                            </li>
+                            <li class="filter-checkbox">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+                                <label for="filter-gallery">Галерея</label>
+                            </li>
+                            <li class="filter-checkbox">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
+                                <label for="filter-basket">Корзина</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="filter-button button">Показать</button>
                 </form>
             </section>
 
             <section class="catalog">
-                <h2 class="visually-hidden">Список шаблонов</h2>
+                <form action="get" class="sort">
+                    <p class="filter-legend">Сортировать:</p>
+                    <ul class="filter-sort">
+                        <li class="filter-sort-radio">
+                            <input class="visually-hidden sort-radio" type="radio" name="sort" value="price" id="sort-price" checked>
+                            <label for="sort-price">По цене</label>
+                        </li>
+                        <li class="filter-sort-radio">
+                            <input class="visually-hidden sort-radio" type="radio" name="sort" value="type" id="sort-type">
+                            <label for="sort-type">По типу</label>
+                        </li>
+                        <li class="filter-sort-radio">
+                            <input class="visually-hidden sort-radio" type="radio" name="sort" value="name" id="sort-name">
+                            <label for="sort-name">По названию</label>
+                        </li>
+                    </ul>
+                    <button class="direction-button descending-button direction-current" type="button" aria-label="Сортировать по убыванию"><img class="image-direction image-descending" src="img/direction.svg" width="11" height="10" alt="По убыванию "></button>
+                    <button class="direction-button ascending-button" type="button" aria-label="Сортировать по возрастанию"><img class="image-direction image-ascending" src="img/direction.svg" width="11" height="10" alt="По возрастанию "></button>
+                </form>
+                <h2 class="visually-hidden ">Список шаблонов</h2>
                 <ul class=" catalog-list ">
-                    <li class="catalog-item ">
+                    <li class="catalog-item" tabindex="0">
                         <div class="product-border">
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                         </div>
                         <div class="product">
-                            <img class="product-image" src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон сайта «SEDONA»">
+                            <img aria-hidden="true" class="product-image" src="img/img-sedona.jpg" width="358" height="578" alt="Шаблон сайта «SEDONA»">
                             <div class="product-description">
                                 <a href=" " class="catalog-item-title">sedona</a>
                                 <p class="product-content">Информационный сайт<br> для туристов</p>
-                                <a href=" " class="button price">9 900 ₽</a>
+                                <a href=" " class="button price" aria-label="Добавить шаблон сайта «SEDONA» в корзину ">9 900 ₽</a>
                             </div>
                         </div>
                     </li>
-                    <li class="catalog-item ">
+                    <li class="catalog-item " tabindex="0">
                         <div class="product-border">
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                         </div>
                         <div class="product">
-                            <img class="product-image" src="img/img-pink.jpg" width="358" height="578" alt="Шаблон сайта «PINK»">
+                            <img aria-hidden="true" class="product-image" src="img/img-pink.jpg" width="358" height="578" alt="Шаблон сайта «PINK»">
                             <div class="product-description">
                                 <a href=" " class="catalog-item-title">pink app</a>
                                 <p class="product-content">Продуктовый лендинг приложения для iOS и Android</p>
-                                <a href=" " class="button price">9 900 ₽</a>
+                                <a href=" " class="button price " aria-label="Добавить шаблон сайта «PINK» в корзину ">9 900 ₽</a>
                             </div>
                         </div>
                     </li>
-                    <li class="catalog-item ">
+                    <li class="catalog-item " tabindex="0">
                         <div class="product-border">
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                         </div>
                         <div class="product">
-                            <img class="product-image" src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон сайта «BORODINSKI»">
+                            <img aria-hidden="true" class="product-image" src="img/img-barbershop.jpg" width="358" height="578" alt="Шаблон сайта «BORODINSKI»">
                             <div class="product-description">
                                 <a href=" " class="catalog-item-title">barbershop</a>
                                 <p class="product-content">Сайт салона красоты.<br> Для мужчин, да.</p>
-                                <a href=" " class="button price">9 900 ₽</a>
+                                <a href=" " class="button price " aria-label="Добавить шаблон сайта «BORODINSKI» в корзину ">9 900 ₽</a>
                             </div>
                         </div>
                     </li>
-                    <li class="catalog-item ">
+                    <li class="catalog-item " tabindex="0">
                         <div class="product-border">
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                         </div>
                         <div class="product">
-                            <img class="product-image" src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон сайта «MISHKA»">
+                            <img aria-hidden="true" class="product-image" src="img/img-mishka.jpg" width="358" height="578" alt="Шаблон сайта «MISHKA»">
                             <div class="product-description">
                                 <a href=" " class="catalog-item-title">mishka</a>
                                 <p class="product-content">Интернет-магазин<br> вязаных игрушек</p>
-                                <a href=" " class="button price">9 900 ₽</a>
+                                <a href=" " class="button price " aria-label="Добавить шаблон сайта «MISHKA» в корзину ">9 900 ₽</a>
                             </div>
                         </div>
                     </li>
-                    <li class="catalog-item ">
+                    <li class="catalog-item " tabindex="0">
                         <div class="product-border">
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                         </div>
                         <div class="product">
-                            <img class="product-image" src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон сайта «A+»">
+                            <img aria-hidden="true" class="product-image" src="img/img-aplus.jpg" width="358" height="578" alt="Шаблон сайта «A+»">
                             <div class="product-description">
                                 <a href=" " class="catalog-item-title">a plus</a>
                                 <p class="product-content">Лендинг курсов повышения квалификации</p>
-                                <a href=" " class="button price">9 900 ₽</a>
+                                <a href=" " class="button price " aria-label="Добавить шаблон сайта «A+» в корзину ">9 900 ₽</a>
                             </div>
                         </div>
                     </li>
-                    <li class="catalog-item ">
+                    <li class="catalog-item " tabindex="0">
                         <div class="product-border">
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                             <div class="border-circle"></div>
                         </div>
                         <div class="product">
-                            <img class="product-image" src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон сайта «КВАСТ»">
+                            <img aria-hidden="true" class="product-image" src="img/img-kvast.jpg" width="358" height="578" alt="Шаблон сайта «КВАСТ»">
                             <div class="product-description">
                                 <a href=" " class="catalog-item-title">кваст</a>
                                 <p class="product-content">Промо-сайт производителя крафтового кваса</p>
-                                <a href=" " class="button price">9 900 ₽</a>
+                                <a href=" " class="button price " aria-label="Добавить шаблон сайта «КВАСТ» в корзину ">9 900 ₽</a>
                             </div>
                         </div>
                     </li>
@@ -181,13 +243,22 @@
                 <h2 class="visually-hidden">Социальные сети</h2>
                 <ul class="social-list">
                     <li>
-                        <a href=" " class="social-button"><img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте"></a>
+                        <a href=" " class="social-button">
+                            <span class="visually-hidden">Вконтакте</span>
+                            <img aria-hidden="true" src="img/vk-icon.svg " width="26" height="15" alt="Вконтакте">
+                        </a>
                     </li>
                     <li>
-                        <a href=" " class="social-button"><img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук"></a>
+                        <a href=" " class="social-button">
+                            <span class="visually-hidden ">Фейсбук</span>
+                            <img aria-hidden="true" src="img/fb-icon.svg " width="12" height="22" alt="Фейсбук">
+                        </a>
                     </li>
                     <li>
-                        <a href=" " class="social-button"><img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм"></a>
+                        <a href=" " class="social-button">
+                            <span class="visually-hidden ">Инстаграм</span>
+                            <img aria-hidden="true" src="img/insta-icon.svg " width="21" height="21" alt="Инстаграм">
+                        </a>
                     </li>
                 </ul>
                 <div class="social-paragraph">
@@ -200,7 +271,7 @@
     <div class="popup">
         <div class="popup-content">
             <p class="popup-title">Напишите нам</p>
-            <button class="close" type="button"><img class="close-image" src="img/close-cross.svg" width="21" height="21" alt="Закрыть"></button>
+            <button class="close" type="button" aria-label="Закрыть"><img class="close-image" src="img/close-cross.svg" width="21" height="21" alt="Закрыть"></button>
         </div>
         <form class="contact-form" action="https://echo.htmlacademy.ru">
             <p>
