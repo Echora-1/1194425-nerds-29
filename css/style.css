@@ -931,15 +931,17 @@ img {
 
 .product-description {
     padding: 22px 53px 44px 52px;
-    width: 255px;
     min-height: 162px;
     bottom: 0;
     left: 0;
     background-color: var(--basic-neutral);
-    display: none;
     position: absolute;
     z-index: 1;
     border-radius: 0 0 5px 5px;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 .catalog-item:nth-child(2n) {
@@ -997,7 +999,10 @@ img {
 }
 
 .catalog-item:hover .product-description {
-    display: block;
+    clip: auto;
+    width: 255px;
+    height: auto;
+    margin: 0px;
 }
 
 .catalog-item:focus {
@@ -1028,81 +1033,83 @@ img {
     display: flex;
     color: rgb(var(--basic-black));
     font-size: 14px;
-    margin-bottom: 33px;
+    margin-bottom: 50px;
+    margin-top: 19px;
 }
 
-.filter-sort {
-    list-style: none;
-    display: flex;
-    text-transform: uppercase;
-    margin-left: 227px;
-    padding-top: 6px;
+.sort-title {
+    margin: 0;
+    margin-right: 266px;
 }
 
-.filter-sort-radio:not(:first-child) {
-    margin-left: 26px;
-}
-
-.sort-radio+label {
+.sort-button {
+    text-decoration: none;
     opacity: 0.3;
+    color: inherit;
+    text-transform: uppercase;
+    margin-top: 2px;
 }
 
-.sort-radio:focus+label {
-    outline: 2px solid rgb(var(--basic-black));
+.sort-button:not(:last-child) {
+    margin-right: 27px;
 }
 
-.sort-radio:hover+label {
+.sort-button:hover {
     opacity: 0.6;
 }
 
-.sort-radio:checked+label {
+.sort-button:active {
     opacity: 1;
 }
 
-.catalog-direction {
-    margin: 0;
-    padding: 0;
-    position: relative;
+.sort-button:focus {
+    opacity: 1;
 }
 
 .direction-button {
-    padding: 0;
-    border: none;
-    background-color: rgb(var(--basic-white));
-    height: 20px;
-    margin-top: 21px;
-}
-
-.direction-button:hover .image-direction {
-    opacity: 0.4;
-}
-
-.direction-button:active .image-direction {
-    opacity: 1;
-}
-
-.direction-current .image-direction {
-    opacity: 1;
-}
-
-.descending-button {
-    margin-left: 47px;
-}
-
-.ascending-button {
-    margin-left: 17px;
-}
-
-.image-direction {
+    position: relative;
     opacity: 0.1;
 }
 
-.image-descending {
-    margin-bottom: 2px;
+.direction-button::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    background-image: url("../img/direction.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
-.image-ascending {
+.descending-button::before {
+    top: 5px;
+    left: 19px;
+}
+
+.ascending-button {
+    margin-left: 10px;
+}
+
+.ascending-button::before {
+    top: 5px;
+    left: 38px;
     transform: rotate(180deg);
+}
+
+.direction-button:hover {
+    opacity: 0.4;
+}
+
+.direction-button:active {
+    opacity: 1;
+}
+
+.direction-button:focus {
+    opacity: 1;
+}
+
+.direction-button:focus::before {
+    outline: 2px solid rgb(var(--basic-black));
 }
 
 

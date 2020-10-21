@@ -103,25 +103,14 @@
             </section>
 
             <section class="catalog">
-                <form action="get" class="sort">
-                    <p class="filter-legend">Сортировать:</p>
-                    <ul class="filter-sort">
-                        <li class="filter-sort-radio">
-                            <input class="visually-hidden sort-radio" type="radio" name="sort" value="price" id="sort-price" checked>
-                            <label for="sort-price">По цене</label>
-                        </li>
-                        <li class="filter-sort-radio">
-                            <input class="visually-hidden sort-radio" type="radio" name="sort" value="type" id="sort-type">
-                            <label for="sort-type">По типу</label>
-                        </li>
-                        <li class="filter-sort-radio">
-                            <input class="visually-hidden sort-radio" type="radio" name="sort" value="name" id="sort-name">
-                            <label for="sort-name">По названию</label>
-                        </li>
-                    </ul>
-                    <button class="direction-button descending-button direction-current" type="button" aria-label="Сортировать по убыванию"><img class="image-direction image-descending" src="img/direction.svg" width="11" height="10" alt="По убыванию "></button>
-                    <button class="direction-button ascending-button" type="button" aria-label="Сортировать по возрастанию"><img class="image-direction image-ascending" src="img/direction.svg" width="11" height="10" alt="По возрастанию "></button>
-                </form>
+                <div class="sort">
+                    <p class="filter-legend sort-title">Сортировать:</p>
+                    <a href="" class="sort-button">По цене</a>
+                    <a href="" class="sort-button ">По типу</a>
+                    <a href="" class="sort-button ">По названию</a>
+                    <a href="" class="direction-button descending-button" aria-label="Cортировать по убыванию"></a>
+                    <a href="" class="direction-button ascending-button" aria-label="Cортировать по возрастанию"></a>
+                </div>
                 <h2 class="visually-hidden ">Список шаблонов</h2>
                 <ul class=" catalog-list ">
                     <li class="catalog-item" tabindex="0">
