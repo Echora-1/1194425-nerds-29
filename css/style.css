@@ -1,6 +1,6 @@
 /* Variables */
 
-:root {
+ :root {
     --basic-black: 0, 0, 0;
     --basic-extra-dark: #283136;
     --basic-neutral: #eeeeee;
@@ -662,6 +662,16 @@ img {
     box-sizing: border-box;
 }
 
+.popup-show {
+    display: block;
+    animation: bounce 0.6s;
+    animation-duration: 1s;
+}
+
+.popup-error {
+    animation: shake 0.6s;
+}
+
 .popup-content {
     font-weight: bold;
     font-size: 45px;
@@ -777,6 +787,31 @@ img {
 .contact-form-input:invalid {
     border: 2px solid var(--basic-extra-red);
     color: var(--basic-extra-red);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(2000px, 52%);
+    }
+    100% {
+        transform: translateX(-50%, 52%);
+    }
+}
+
+@keyframes shake {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate(-49%, 52%);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate(-51%, 52%);
+    }
 }
 
 
@@ -1005,25 +1040,24 @@ img {
     margin: 0px;
 }
 
-.catalog-item:focus {
+.catalog-item:focus-within {
     box-shadow: 0px 6px 15px rgba(var(--basic-black), 0.25);
     border-radius: 5px;
 }
 
-.catalog-item:focus .product-border {
+.catalog-item:focus-within .product-border {
     background-color: rgba(var(--product-gray), 1);
 }
 
-.catalog-item:focus .product {
+.catalog-item:focus-within .product {
     border: none;
 }
 
-.catalog-item:focus .product-description {
-    display: block;
-}
-
 .catalog-item:focus-within .product-description {
-    display: block;
+    clip: auto;
+    width: 255px;
+    height: auto;
+    margin: 0px;
 }
 
 
@@ -1050,6 +1084,10 @@ img {
     margin-top: 2px;
 }
 
+.sort-curent {
+    opacity: 1;
+}
+
 .sort-button:not(:last-child) {
     margin-right: 27px;
 }
@@ -1067,13 +1105,7 @@ img {
 }
 
 .direction-button {
-    position: relative;
     opacity: 0.1;
-}
-
-.direction-button::before {
-    content: "";
-    position: absolute;
     width: 11px;
     height: 10px;
     background-image: url("../img/direction.svg");
@@ -1081,18 +1113,18 @@ img {
     background-position: 0 0;
 }
 
-.descending-button::before {
-    top: 5px;
-    left: 19px;
+.direction-curent {
+    opacity: 1;
+}
+
+.descending-button {
+    margin-top: 5px;
+    margin-left: 19px;
 }
 
 .ascending-button {
-    margin-left: 10px;
-}
-
-.ascending-button::before {
-    top: 5px;
-    left: 38px;
+    margin-top: 5px;
+    margin-left: 18px;
     transform: rotate(180deg);
 }
 
@@ -1106,9 +1138,6 @@ img {
 
 .direction-button:focus {
     opacity: 1;
-}
-
-.direction-button:focus::before {
     outline: 2px solid rgb(var(--basic-black));
 }
 
