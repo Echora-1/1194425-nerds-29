@@ -3,7 +3,7 @@
 const contactsLink = document.querySelector(".contacts-button");
 const contactsClose = document.querySelector(".close");
 const popup = document.querySelector(".popup");
-const contactForm = document.querySelector(".contact-form")
+const contactForm = document.querySelector(".contact-form");
 const userName = document.querySelector(".name-user");
 const userMail = document.querySelector(".email-user");
 const userMassage = document.querySelector(".message-textarea");
@@ -21,7 +21,7 @@ try {
 
 contactsLink.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.add("popup-show")
+    popup.classList.add("popup-show");
     if (storageName && storageMail) {
         userName.value = storageName;
         userMail.value = storageMail;

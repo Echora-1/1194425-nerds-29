@@ -787,6 +787,7 @@ img {
 .contact-form-input:invalid {
     border: 2px solid var(--basic-extra-red);
     color: var(--basic-extra-red);
+    outline: none;
 }
 
 @keyframes bounce {
@@ -794,7 +795,7 @@ img {
         transform: translate(2000px, 52%);
     }
     100% {
-        transform: translateX(-50%, 52%);
+        transform: translate(-50%, 52%);
     }
 }
 
