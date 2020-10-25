@@ -581,29 +581,27 @@ img {
 
 .page-footer {
     grid-row: 3/4;
+    position: relative;
 }
 
 .footer-container {
     width: 1160px;
     margin: 0 auto;
-    padding-top: 60px;
     padding-right: 20px;
     padding-bottom: 68px;
     padding-left: 20px;
     display: grid;
     grid-template-rows: auto auto;
-    position: relative;
 }
 
 
 /* Contacts */
 
-.map-content {
-    position: relative;
-}
-
 .map {
+    margin-top: 62px;
     height: 416px;
+    width: 100%;
+    border: none;
 }
 
 .footer-contacts {
@@ -613,8 +611,7 @@ img {
     line-height: 18px;
     color: var(--basic-gray);
     position: absolute;
-    top: 54px;
-    left: 0px;
+    top: 115px;
     z-index: 1;
     background-color: rgb(var(--basic-white));
 }
@@ -656,16 +653,24 @@ img {
     width: 960px;
     height: 590px;
     padding: 65px 99px 84px 100px;
-    display: none;
+    display: block;
     box-shadow: 0px 20px 40px rgba(var(--basic-black), 0.4);
     background-color: rgb(var(--basic-white));
     box-sizing: border-box;
 }
 
 .popup-show {
-    display: block;
     animation: bounce 0.6s;
     animation-duration: 1s;
+}
+
+.popup-close {
+    animation: bounce-close 0.6s;
+    animation-duration: 1s;
+}
+
+.popup-hidden {
+    display: none;
 }
 
 .popup-error {
@@ -796,6 +801,15 @@ img {
     }
     100% {
         transform: translate(-50%, 52%);
+    }
+}
+
+@keyframes bounce-close {
+    0% {
+        transform: translate(-50%, 52%);
+    }
+    100% {
+        transform: translate(-2000px, 52%);
     }
 }
 
