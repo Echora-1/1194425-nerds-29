@@ -1,6 +1,6 @@
 /* Variables */
 
- :root {
+:root {
     --basic-black: 0, 0, 0;
     --basic-extra-dark: #283136;
     --basic-neutral: #eeeeee;
@@ -188,8 +188,7 @@ img {
 
 .site-navigation a:active,
 .user-navigation a:active {
-    mix-blend-mode: normal;
-    opacity: 0.3;
+    color: rgba(var(--basic-black), 0.3);
 }
 
 
@@ -660,12 +659,16 @@ img {
 }
 
 .popup-show {
+    -webkit-animation: bounce 0.6s;
     animation: bounce 0.6s;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
 
 .popup-close {
+    -webkit-animation: bounce-close 0.6s;
     animation: bounce-close 0.6s;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
 
@@ -674,6 +677,7 @@ img {
 }
 
 .popup-error {
+    -webkit-animation: shake 0.6s;
     animation: shake 0.6s;
 }
 
@@ -795,6 +799,15 @@ img {
     outline: none;
 }
 
+@-webkit-keyframes bounce {
+    0% {
+        transform: translate(2000px, 52%);
+    }
+    100% {
+        transform: translate(-50%, 52%);
+    }
+}
+
 @keyframes bounce {
     0% {
         transform: translate(2000px, 52%);
@@ -804,12 +817,37 @@ img {
     }
 }
 
+@-webkit-keyframes bounce-close {
+    0% {
+        transform: translate(-50%, 52%);
+    }
+    100% {
+        transform: translate(-2000px, 52%);
+    }
+}
+
 @keyframes bounce-close {
     0% {
         transform: translate(-50%, 52%);
     }
     100% {
         transform: translate(-2000px, 52%);
+    }
+}
+
+@-webkit-keyframes shake {
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate(-49%, 52%);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate(-51%, 52%);
     }
 }
 
@@ -1269,6 +1307,7 @@ img {
 
 .filter-grid {
     list-style: none;
+    -webkit-padding-start: 35px;
     padding-inline-start: 35px;
 }
 
@@ -1276,6 +1315,8 @@ img {
     position: relative;
     display: block;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
     line-height: 19px;
     color: var(--basic-extra-dark);
@@ -1343,6 +1384,7 @@ img {
 
 .filter-features {
     list-style: none;
+    -webkit-padding-start: 35px;
     padding-inline-start: 35px;
 }
 

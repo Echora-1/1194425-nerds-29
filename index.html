@@ -6,7 +6,7 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -210,7 +210,7 @@
         <form class="contact-form" action="https://echo.htmlacademy.ru">
             <p>
                 <label class="contact-form--title" for="name-field">Ваше имя:</label><br>
-                <input class="name-user contact-form-input " id="name-field" type="text" name="name" placeholder="Имя Фамилия " pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                <input class="name-user contact-form-input " id="name-field" type="text" name="name" placeholder="Имя Фамилия " pattern="[A-Za-zА-Яа-яЁё]{2,}( [A-Za-zА-Яа-яЁё]{2,})?">
             </p>
             <p>
                 <label class="contact-form--title" for="email-field">Ваш email:</label><br>
@@ -223,7 +223,7 @@
             <button class="send-button button " type="submit">Отправить</button>
         </form>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
