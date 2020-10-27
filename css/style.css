@@ -600,7 +600,10 @@ img {
     margin-top: 62px;
     height: 416px;
     width: 100%;
-    border: none;
+	border: none;
+	background-image: url(../img/map.png);
+	background-repeat: no-repeat;
+	background-position: 232px 0;
 }
 
 .footer-contacts {
