@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Магазин Нёрдс</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -43,8 +43,8 @@
                                 <div class="scale">
                                     <div class="bar"></div>
                                 </div>
-                                <div class="toggle toggle-min" tabindex="0"></div>
-                                <div class="toggle toggle-max" tabindex="0"></div>
+                                <div class="toggle toggle-min" tabindex="0" aria-label="Выбрать минимальную цену"></div>
+                                <div class="toggle toggle-max" tabindex="0" aria-label="Выбрать максимальную цену"></div>
                             </div>
                             <div class="price-controls">
                                 <label class="min-price">
@@ -104,12 +104,14 @@
 
             <section class="catalog">
                 <div class="sort">
-                    <p class="filter-legend sort-title">Сортировать:</p>
-                    <a href="" class="sort-button sort-curent">По цене</a>
-                    <a href="" class="sort-button ">По типу</a>
-                    <a href="" class="sort-button ">По названию</a>
-                    <a href="" class="direction-button descending-button direction-curent" aria-label="Cортировать по убыванию"></a>
-                    <a href="" class="direction-button ascending-button" aria-label="Cортировать по возрастанию"></a>
+					<p class="filter-legend sort-title">Сортировать:</p>
+					<div class="sort-interface">
+                    	<a href="" class="sort-button sort-curent">По цене</a>
+                    	<a href="" class="sort-button ">По типу</a>
+                    	<a href="" class="sort-button ">По названию</a>
+                    	<a href="" class="direction-button descending-button direction-curent" aria-label="Cортировать по убыванию"></a>
+						<a href="" class="direction-button ascending-button" aria-label="Cортировать по возрастанию"></a>
+					</div>
                 </div>
                 <h2 class="visually-hidden ">Список шаблонов</h2>
                 <ul class=" catalog-list ">

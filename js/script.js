@@ -20,10 +20,10 @@ try {
     isStorageSupport = false;
 }
 
-contactsLink.addEventListener('click', function(evt) {
+contactsLink.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.remove('popup-hidden');
-    popup.classList.add('popup-show');
+    popup.classList.remove("popup-hidden");
+    popup.classList.add("popup-show");
     if (storageName && storageMail) {
         userName.value = storageName;
         userMail.value = storageMail;
@@ -33,18 +33,18 @@ contactsLink.addEventListener('click', function(evt) {
     }
 
     setTimeout(function() {
-        popup.classList.remove('popup-show');
+        popup.classList.remove("popup-show");
     }, 1000);
 
 });
 
-contactsClose.addEventListener('click', function(evt) {
+contactsClose.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.add('popup-close');
+    popup.classList.add("popup-close");
 
     setTimeout(function() {
-        popup.classList.add('popup-hidden');
-        popup.classList.remove('popup-close');
+        popup.classList.add("popup-hidden");
+        popup.classList.remove("popup-close");
         popup.classList.remove("popup-error");
     }, 600);
 });
@@ -82,11 +82,11 @@ window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
         if (!popup.classList.contains("popup-hidden")) {
             evt.preventDefault();
-            popup.classList.add('popup-close');
+            popup.classList.add("popup-close");
 
             setTimeout(function() {
-                popup.classList.add('popup-hidden');
-                popup.classList.remove('popup-close');
+                popup.classList.add("popup-hidden");
+                popup.classList.remove("popup-close");
                 popup.classList.remove("popup-error");
             }, 600);
         }
